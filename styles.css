@@ -206,6 +206,10 @@ nav {
         height: auto;
     }
 
+    .menu-item-details p {
+        color: #ff1900; /* Cambia este color al que prefieras */
+    }
+
     .menu-item-details .product-name,
     .menu-item-details p,
     .price {
@@ -235,6 +239,11 @@ nav {
 .price {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+/* Cambiar el color de "Ingredientes:" */
+.ingredientes-text {
+    color: #ff1900; /* Cambia este color al que prefieras */
 }
 
 /* Contact Section */
@@ -271,13 +280,13 @@ nav {
 }
 
 .contact-info a {
-    color: #e74c3c;
+    color: #e79d3c;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .contact-info a:hover {
-    color: #c0392b;
+    color: #e79d3c;
 }
 
 /* Footer */
@@ -307,7 +316,7 @@ footer {
 
 .footer-section h3 {
     margin-bottom: 0.5rem;
-    color: #ffffff;
+    color: #e79d3c;
 }
 
 .footer-section p {
@@ -456,4 +465,6 @@ h2, .product-name, .menu-item-details p {
     .price {
         font-size: 1.5rem; /* Tamaño de letra para el precio */
     }
+
+
 }
