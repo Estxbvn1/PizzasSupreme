@@ -241,6 +241,43 @@ nav {
     font-weight: bold;
 }
 
+/* Extra Ingredients Section */
+.extra-ingredients {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    padding: 2rem 0;
+    background-color: #252424; /* Mismo color gris oscuro */
+}
+
+.extra-ingredients-content {
+    background-color: #252424; /* Mismo color gris oscuro */
+    padding: 1.5rem 2rem; /* Ajusta el padding según necesites */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 80%; /* Limitar el ancho máximo */
+    text-align: center; /* Centrar el texto */
+    color: white; /* Color del texto */
+}
+
+
+.extra-ingredients h2 {
+    margin-bottom: 1rem;
+}
+
+.extra-ingredients p {
+    margin: 0;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .extra-ingredients-content {
+        max-width: 90%;
+        padding: 1rem;
+    }
+}
+
+
+
 /* Cambiar el color de "Ingredientes:" */
 .ingredientes-text {
     color: #ff1900; /* Cambia este color al que prefieras */
