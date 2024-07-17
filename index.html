@@ -1,331 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú del Local de Comida</title>
+    <title>SupremePizzas - Menú</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH2N2ueXfQz+0jEMf8dfj/4zMN2X7Nfa8ThZn6zN4ntvZkDqxNvoBBLqCx6nLRGA5aX8i7VA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
-        <div class="logo-container">
-            <img src="imagenes/logo.jpg" alt="Logo del Local" class="logo">
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li class="logo-container">
+                        <img src="imagenes/logo.jpg" alt="SupremePizzas Logo" class="logo">
+                    </li>
+                    <li class="nav-items">
+                        <a href="#home">Inicio</a>
+                        <a href="#menu">Menú</a>
+                        <a href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <h1>Menú</h1>
     </header>
-    <main>
-        <!-- Botones de filtro -->
-        <div class="filter-buttons">
-            <button class="filter-btn" data-category="all">Todo</button>
-            <button class="filter-btn" data-category="pizzas">Pizzas</button>
-            <button class="filter-btn" data-category="empanadas">Empanadas</button>
-            <button class="filter-btn" data-category="papas">Papas Supremas</button>
-            <button class="filter-btn" data-category="completos">Completos</button>
-            <button class="filter-btn" data-category="sandwich">Sandwich</button>
-            <button class="filter-btn" data-category="reposteria">Repostería</button>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Bienvenido a SupremePizzas</h1>
         </div>
+    </section>
 
-        <!-- Sección Pizzas -->
-        <section class="menu-section" data-category="pizzas">
-            <h2>Pizzas</h2>
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2>Nuestro Menú</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn" data-category="all">Todos</button> <!-- Botón Todos -->
+                <button class="filter-btn" data-category="pizzas">Pizzas</button>
+                <button class="filter-btn" data-category="papas">Papas</button>
+                <button class="filter-btn" data-category="sandwich">Sandwich</button>
+                <button class="filter-btn" data-category="completos">Completos</button>
+                <button class="filter-btn" data-category="fajitas">Fajitas</button>
+                <button class="filter-btn" data-category="bebestible">Bebestible</button>
+            </div>            
+
             <div class="menu-item-container">
+                <!-- Pizzas -->
                 <div class="menu-item" data-category="pizzas">
-                    <p class="pizza-name">Peperoni</p>
-                    <img src="imagenes/pizza1.jpeg" alt="Pizza 1">
-                    <h3>Pepperoni y Queso mozzarella</h3>
-                    <p>$8.000</p>
-                </div>
-                <div class="menu-item" data-category="pizzas">
-                    <p class="pizza-name">Napolitana</p>
-                    <img src="imagenes/pizza2.jpg" alt="Pizza 2">
-                    <h3>Tomate, Queso mozzarella</h3>
-                    <p>$10.000</p>
-                </div>
-                <div class="menu-item" data-category="pizzas">
-                    <p class="pizza-name">Pizza personalizable</p>
-                    <img src="imagenes/pizza3.jpeg" alt="Pizza 3">
-                    <h3>Elección de 4 Ingredientes</h3>
-                    <p>$12.000</p>
-                </div>
-            </div>
-            <div class="menu-item-container">
-                <div class="menu-item" data-category="pizzas">
-                    <p class="pizza-name">Nombre Pizza</p>
-                    <img src="imagenes/pizza4.jpg" alt="Pizza 4">
-                    <h3>Ingredientes</h3>
-                    <p>$0</p>
+                    <div class="menu-item-details">
+                        <p class="product-name">NAPOLITANA</p>
+                        <img src="imagenes/pizza1.jpeg" alt="Pizza Napolitana">
+                        <p>Ingredientes:</p>
+                        <span class="price">$6.500</span>
+                    </div>
                 </div>
                 <div class="menu-item" data-category="pizzas">
-                    <p class="pizza-name">Nombre Pizza</p>
-                    <img src="imagenes/pizza5.jpg" alt="Pizza 5">
-                    <h3>Ingredientes</h3>
-                    <p>$0</p>
+                    <div class="menu-item-details">
+                        <p class="product-name">PEPPERONI</p>
+                        <img src="imagenes/pizza2.jpg" alt="Pizza Pepperoni">
+                        <p>Ingredientes:</p>
+                        <span class="price">$6.500</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+                <div class="menu-item" data-category="pizzas">
+                    <div class="menu-item-details">
+                        <p class="product-name">VEGETARIANA</p>
+                        <img src="imagenes/pizza3.jpeg" alt="Pizza Vegetariana">
+                        <p>Ingredientes:</p>
+                        <span class="price">$6.500</span>
+                    </div>
+                </div>
 
-        <!-- Sección Papas Supremas -->
-        <section class="menu-section" data-category="papas">
-            <h2>Papas Supremas</h2>
-            <div class="menu-item-container">
+                <!-- Papas -->
                 <div class="menu-item" data-category="papas">
-                    <p class="papas-name">Cheddar</p>
-                    <img src="imagenes/papas1.jpg" alt="Papas1">
-                    <h3>Queso cheddar derretido</h3>
-                    <p>$7.500</p>
-                </div>
-                <div class="menu-item" data-category="papas">
-                    <p class="papas-name">Tocino queso</p>
-                    <img src="imagenes/papas2.jpg" alt="Papas2">
-                    <h3>Papas Fritas 2</h3>
-                    <p>$0</p>
-                </div>
-                <div class="menu-item" data-category="papas">
-                    <p class="papas-name">Chorrillana</p>
-                    <img src="imagenes/papas3.jpeg" alt="Papas3">
-                    <h3>Papas Supremas 3</h3>
-                    <p>$0</p>
-                </div>
-            </div>
-            <div class="menu-item-container">
-                <div class="menu-item" data-category="papas">
-                    <p class="papas-name">Vegetariana</p>
-                    <img src="imagenes/papas4.jpg" alt="Papas4">
-                    <h3>Papas Supremas 4</h3>
-                    <p>$0</p>
+                    <div class="menu-item-details">
+                        <p class="product-name">PAPA SOLA</p>
+                        <img src="imagenes/papas1.jpg" alt="Papas Fritas">
+                        <p>Ingredientes:</p>
+                        <span class="price">$5.990</span>
+                    </div>
                 </div>
                 <div class="menu-item" data-category="papas">
-                    <p class="papas-name">Personalizable</p>
-                    <img src="imagenes/papas5.jpeg" alt="Papas5">
-                    <h3>Papas Supremas 5</h3>
-                    <p>$0</p>
+                    <div class="menu-item-details">
+                        <p class="product-name">SALCHIPAPA</p>
+                        <img src="imagenes/papas2.jpg" alt="Salchipapa">
+                        <p>Ingredientes:</p>
+                        <span class="price">$7.000</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+                <div class="menu-item" data-category="papas">
+                    <div class="menu-item-details">
+                        <p class="product-name">CHORRILLANA</p>
+                        <img src="imagenes/papas3.jpeg" alt="Chorrillana">
+                        <p>Ingredientes:</p>
+                        <span class="price">$9.500</span>
+                    </div>
+                </div>
 
-        <!-- Sección Completos -->
-        <section class="menu-section" data-category="completos">
-            <h2>Completos</h2>
-            <div class="menu-item-container">
-                <div class="menu-item" data-category="completos">
-                    <p class="completo-name">Italiano</p>
-                    <img src="imagenes/completo1.jpg" alt="Completo 1">
-                    <h3>Completo 1</h3>
-                    <p>$3.000</p>
+                <!-- Sandwich -->
+                <div class="menu-item" data-category="sandwich">
+                    <div class="menu-item-details">
+                        <p class="product-name">ITALIANO</p>
+                        <img src="imagenes/sandwich1.jpg" alt="Sandwich Italiano">
+                        <p>Ingredientes:</p>
+                        <span class="price">$4.000</span>
+                    </div>
                 </div>
-                <div class="menu-item" data-category="completos">
-                    <p class="completo-name">Tomate-Mayo</p>
-                    <img src="imagenes/completo2.jpg" alt="Completo 2">
-                    <h3>Completo 2</h3>
-                    <p>$0</p>
+                <div class="menu-item" data-category="sandwich">
+                    <div class="menu-item-details">
+                        <p class="product-name">LUCO</p>
+                        <img src="imagenes/sandwich2.jpg" alt="Sandwich Luco">
+                        <p>Ingredientes:</p>
+                        <span class="price">$4.000</span>
+                    </div>
                 </div>
-                <div class="menu-item" data-category="completos">
-                    <p class="completo-name">Palta-Mayo</p>
-                    <img src="imagenes/completo3.jpg" alt="Completo 3">
-                    <h3>Completo 3</h3>
-                    <p>$0</p>
+                <div class="menu-item" data-category="sandwich">
+                    <div class="menu-item-details">
+                        <p class="product-name">CHACARERO</p>
+                        <img src="imagenes/sandwich3.jpg" alt="Sandwich Chacarero">
+                        <p>Ingredientes:</p>
+                        <span class="price">$4.000</span>
+                    </div>
                 </div>
-            </div>
-            <div class="menu-item-container">
-                <div class="menu-item" data-category="completos">
-                    <p class="completo-name">Vegetariano</p>
-                    <img src="imagenes/completo4.jpg" alt="Completo 4">
-                    <h3>Completo 4</h3>
-                    <p>$0</p>
-                </div>
-                <div class="menu-item" data-category="completos">
-                    <p class="completo-name">Dinamico</p>
-                    <img src="imagenes/completo5.jpg" alt="Completo 5">
-                    <h3>Completo 5</h3>
-                    <p>$0</p>
-                </div>
-                <div class="menu-item" data-category="completos">
-                    <p class="completo-name">Completo</p>
-                    <img src="imagenes/completo6.jpg" alt="Completo 6">
-                    <h3>Completo 6</h3>
-                    <p>$0</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Sección Sandwich -->
-        <section class="menu-section" data-category="sandwich">
-            <h2>Sandwich</h2>
-            <div class="menu-item-container">
-                <div class="menu-item" data-category="sandwiches">
-                    <p class="sandwich-name">Barros Luco</p>
-                    <img src="imagenes/sandwich1.jpg" alt="Sandwich 1">
-                    <h3>Luco</h3>
-                    <p>$5.000</p>
+                <!-- Completos -->
+                <div class="menu-item" data-category="completos">
+                    <div class="menu-item-details">
+                        <p class="product-name">ITALIANO</p>
+                        <img src="imagenes/completo1.jpg" alt="Completo Italiano">
+                        <p>Ingredientes:</p>
+                        <span class="price">$3.500</span>
+                    </div>
                 </div>
-                <div class="menu-item" data-category="sandwiches">
-                    <p class="sandwich-name">Chacarero</p>
-                    <img src="imagenes/sandwich2.png" alt="Sandwich 2">
-                    <h3>Chacarero</h3>
-                    <p>$6.000</p>
+                <div class="menu-item" data-category="completos">
+                    <div class="menu-item-details">
+                        <p class="product-name">LUCO</p>
+                        <img src="imagenes/completo2.jpg" alt="Completo Luco">
+                        <p>Ingredientes:</p>
+                        <span class="price">$3.500</span>
+                    </div>
                 </div>
-                <div class="menu-item" data-category="sandwiches">
-                    <p class="sandwich-name">Italiano</p>
-                    <img src="imagenes/sandwich3.jpeg" alt="Sandwich 3">
-                    <h3>Italiano</h3>
-                    <p>$7.000</p>
+                <div class="menu-item" data-category="completos">
+                    <div class="menu-item-details">
+                        <p class="product-name">DINÁMICO</p>
+                        <img src="imagenes/completo3.jpg" alt="Completo Dinámico">
+                        <p>Ingredientes:</p>
+                        <span class="price">$4.000</span>
+                    </div>
                 </div>
-            </div>
-            <div class="menu-item-container">
-                <div class="menu-item" data-category="sandwiches">
-                    <p class="sandwich-name">Tocino Queso</p>
-                    <img src="imagenes/sandwich4.jpg" alt="Sandwich 4">
-                    <h3>Tocino Queso</h3>
-                    <p>$0</p>
-                </div>
-                <div class="menu-item" data-category="sandwiches">
-                    <p class="sandwich-name">Personalizable</p>
-                    <img src="imagenes/sandwich5.jpg" alt="Sandwich 5">
-                    <h3>Hamburguesa 5</h3>
-                    <p>$0</p>
-                </div>
-                <div class="menu-item" data-category="sandwiches">
-                    <p class="sandwich-name">Luco</p>
-                    <img src="imagenes/sandwich6.jpg" alt="Sandwich 6">
-                    <h3>Hamburguesa 6</h3>
-                    <p>$0</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Sección Empanadas -->
-        <section class="menu-section" data-category="empanadas">
-            <h2>Empanadas</h2>
-            <div class="menu-item-container">
-                <div class="menu-item" data-category="empanadas">
-                    <p class="empanada-name">Pino</p>
-                    <img src="imagenes/empanada1.jpg" alt="Empanada 1">
-                    <h3>Empanada 1</h3>
-                    <p>$3.000</p>
-                </div>
-                <div class="menu-item" data-category="empanadas">
-                    <p class="empanada-name">Carne</p>
-                    <img src="imagenes/empanada2.jpg" alt="Empanada 2">
-                    <h3>Empanada 2</h3>
-                    <p>$4.000</p>
-                </div>
-                <div class="menu-item" data-category="empanadas">
-                    <p class="empanada-name">Queso</p>
-                    <img src="imagenes/empanada3.jpg" alt="Empanada 3">
-                    <h3>Empanada 3</h3>
-                    <p>$2.500</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección Fajitas -->
-        <section class="menu-section" data-category="fajitas">
-            <h2>Fajitas</h2>
-            <div class="menu-item-container">
+                <!-- Fajitas -->
                 <div class="menu-item" data-category="fajitas">
-                    <p class="fajita-name">Fajita 1</p>
-                    <img src="imagenes/fajita1.jpg" alt="fajita 1">
-                    <h3>Pollo, churrasco, carne mechada, pollo cryspy</h3>
-                    <p>$3.000</p>
+                    <div class="menu-item-details">
+                        <p class="product-name">FAJITA CARNE</p>
+                        <img src="imagenes/fajita1.jpg" alt="Fajita Carne">
+                        <p>Ingredientes:</p>
+                        <span class="price">$4.000</span>
+                    </div>
                 </div>
                 <div class="menu-item" data-category="fajitas">
-                    <p class="fajita-name">Fajita 2</p>
-                    <img src="imagenes/fajita2.jpg" alt="Empanada 2">
-                    <h3>Pollo y carne</h3>
-                    <p>$4.000</p>
+                    <div class="menu-item-details">
+                        <p class="product-name">FAJITA POLLO</p>
+                        <img src="imagenes/fajita2.jpg" alt="Fajita Pollo">
+                        <p>Ingredientes:</p>
+                        <span class="price">$4.000</span>
+                    </div>
                 </div>
                 <div class="menu-item" data-category="fajitas">
-                    <p class="fajita-name">Fajita 3</p>
-                    <img src="imagenes/fajita3.jpg" alt="Empanada 3">
-                    <h3>Base aceituna/champiñon</h3>
-                    <p>$2.500</p>
+                    <div class="menu-item-details">
+                        <p class="product-name">FAJITA POLLO Y CARNE</p>
+                        <img src="imagenes/fajita3.jpg" alt="Fajita Pollo y Carne">
+                        <p>Ingredientes:</p>
+                        <span class="price">$6.000</span>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Sección Reposteria -->
-        <section class="menu-section" data-category="reposteria">
-            <h2>Reposteria</h2>
-            <div class="menu-item-container">
-                <div class="menu-item" data-category="reposteria">
-                    <p class="reposteria-name">Rollos de canela</p>
-                    <img src="imagenes/rollodecanela.jpg" alt="reposteria 1">
-                    <h3>Ingredientes</h3>
-                    <p>$5.000</p>
+                <!-- Bebestible -->
+                <div class="menu-item" data-category="bebestible">
+                    <div class="menu-item-details">
+                        <p class="product-name">BEBIDA LATA</p>
+                        <img src="imagenes/bebida1.jpg" alt="Bebida Lata">
+                        <p>Ingredientes:</p>
+                        <span class="price">$1.000</span>
+                    </div>
                 </div>
-                <div class="menu-item" data-category="reposteria">
-                    <p class="reposteria-name">Pie de limón</p>
-                    <img src="imagenes/piedelimon.jpg" alt="reposteria 2">
-                    <h3>Ingredientes</h3>
-                    <p>$1.000</p>
+                <div class="menu-item" data-category="bebestible">
+                    <div class="menu-item-details">
+                        <p class="product-name">BEBIDA 1.5</p>
+                        <img src="imagenes/bebida2.jpg" alt="Bebida 1.5LT">
+                        <p>Ingredientes:</p>
+                        <span class="price">$1.500</span>
+                    </div>
                 </div>
-                <div class="menu-item" data-category="reposteria">
-                    <p class="reposteria-name">Queque</p>
-                    <img src="imagenes/queque.png" alt="reposteria 3">
-                    <h3>Ingredientes</h3>
-                    <p>$2.000</p>
+                <div class="menu-item" data-category="bebestible">
+                    <div class="menu-item-details">
+                        <p class="product-name">TE</p>
+                        <img src="imagenes/te.jpg" alt="Te">
+                        <p>Ingredientes:</p>
+                        <span class="price">$1.000</span>
+                    </div>
                 </div>
-                <div class="menu-item" data-category="reposteria">
-                    <p class="reposteria-name">Kuchen</p>
-                    <img src="imagenes/kuchen.jpg" alt="reposteria 4">
-                    <h3>Ingredientes</h3>
-                    <p>$2.000</p>
+                <div class="menu-item" data-category="bebestible">
+                    <div class="menu-item-details">
+                        <p class="product-name">CAFÉ</p>
+                        <img src="imagenes/cafe.jpg" alt="Cafe">
+                        <p>Ingredientes:</p>
+                        <span class="price">$1.000</span>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- Sección de contacto -->
-    <section class="contact-section">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Contacto</h3>
-                <p>Contacto: <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>.</p>
-                <p>Email: <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a></p>
-                <p>Teléfono: +56 9 1234 5678</p>
-            </div>
-            <div class="contact-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1398.6301241020326!2d-70.67697251631276!3d-33.51381688520126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662db226ffbd33b%3A0x725829a8b68cbb08!2sValpara%C3%ADso%206861%2C%20Santiago%2C%20Lo%20Espejo%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1720306528158!5m2!1sen!2scl"
-                    width="800"
-                    height="600"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <!-- Ingredientes Extra -->
+                <div class="menu-item" data-category="ingredientes">
+                    <div class="menu-item-details">
+                        <p class="product-name">AGREGA CUALQUIER INGREDIENTE X 1000</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <footer class="footer">
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>¡Contáctanos!</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Contacto: <a href="https://api.whatsapp.com/send?phone=56940094664&text=Hola%20Quiero%20Realizar%20Un%20Pedido,%20Mi%20Nombre%20Es....%20 " target="_blank">WhatsApp</a></p>
+                    <p>Email: <a href="mailto:infopizzaas@gmail.com">infopizzaas@gmail.com</a></p>
+                    <p>Teléfono:<a href="tel:+56 9 4009 4664"> +56 9 4009 4664</a></p>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.455679447676!2d-70.67863510000001!3d-33.515536299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662db187b9442e9%3A0x64b6c45637096014!2sLos%20Vilos%2002017%2C%20Lo%20Espejo%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1721189459947!5m2!1sen!2scl"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Delivery</h3>
-                <p><strong>Lo espejo - La cisterna - Pedro aguirre cerda - San miguel</strong></p>
+                <p>Lo espejo - La cisterna - Pedro aguirre cerda - San miguel</p>
             </div>
             <div class="footer-section">
                 <h3>Horario</h3>
-                <p><strong>Martes - Domingo:</strong></p>
-                <p><strong>18:00hrs - 00:00hrs</strong></p>
+                <p>Lunes - Domingo: 18:00hrs - 00:10hrs</p>
             </div>
             <div class="footer-section">
                 <h3>Local ubicado en</h3>
-                <p><strong>Direccion</strong></p>
+                <p>Los vilos 02017</p>
             </div>
             <div class="footer-section">
                 <h3>Redes sociales</h3>
-                <p><strong>@redes</strong></p>
                 <div class="social-icons">
+                    <p>@Supreme_pizzaa</p>
                 </div>
             </div>
         </div>
-    </footer>
-    
-    <footer class="footer">
-        <p>Todos los derechos reservados &copy; 2024, desarrollado por Esteban</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SupremePizzas. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <div class="floating-buttons">
+        <a href="https://api.whatsapp.com/send?phone=56940094664&text=Hola%20Quiero%20Realizar%20Un%20Pedido,%20Mi%20Nombre%20Es....%20 " target="_blank" class="floating-button whatsapp">
+            <img src="imagenes/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/supreme_pizzaa?igsh=czN2aDMwZWE5NGRo" target="_blank" class="floating-button instagram">
+            <img src="imagenes/instagram.png" alt="Instagram">
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+    
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    // Scroll hacia abajo
+                    header.classList.add('hidden');
+                } else {
+                    // Scroll hacia arriba
+                    header.classList.remove('hidden');
+                }
+                lastScrollTop = scrollTop;
+            });
+    
+            const buttons = document.querySelectorAll('.filter-btn');
+            const menuItems = document.querySelectorAll('.menu-item');
+    
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.getAttribute('data-category');
+    
+                    menuItems.forEach(item => {
+                        if (category === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            if (item.getAttribute('data-category') === category) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+    
+            const fileInput = document.getElementById('file-input');
+            fileInput.addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        // Hacer algo con la imagen cargada, por ejemplo, mostrarla en un lugar específico
+                        const imageUrl = e.target.result;
+                        console.log('Imagen cargada:', imageUrl);
+                        // Aquí puedes añadir el código para mostrar la imagen en el sitio web
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
