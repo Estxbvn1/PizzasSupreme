@@ -102,6 +102,31 @@ nav {
     margin: 0 auto;
 }
 
+/* Ajuste del logo en la sección de bienvenida */
+.logo-bienvenida {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background-color: #1c1c1c; /* Fondo del mismo color para que no se vea el borde */
+    border-radius: 50%; /* Hacer el logo circular */
+    padding: 1rem; /* Espacio alrededor del logo */
+    width: 250; /* Tamaño del logo */
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Estilo para la sección de bienvenida */
+.hero-content {
+    text-align: center;
+    padding-top: 4rem; /* Ajusta este valor según necesites */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-top: 0; /* Quitar margen superior */
+}
+
+
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
