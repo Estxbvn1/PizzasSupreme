@@ -1,11 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.filter-btn');
-    const sections = document.querySelectorAll('.menu-section');
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
 
-    // Mostrar la sección "Todo" al cargar la página
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Scroll hacia abajo
+            header.classList.add('hidden');
+        } else {
+            // Scroll hacia arriba
+            header.classList.remove('hidden');
+        }
+        lastScrollTop = scrollTop;
+    });
+
+    const buttons = document.querySelectorAll('.filter-btn');
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    // Mostrar la sección "Todos" al cargar la página
     const showAll = () => {
-        sections.forEach(section => {
-            section.classList.add('active');
+        menuItems.forEach(item => {
+            item.style.display = 'block';
         });
     };
 
@@ -15,17 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const category = button.getAttribute('data-category');
 
-            sections.forEach(section => {
+            menuItems.forEach(item => {
                 if (category === 'all') {
-                    showAll();
-                } else if (section.getAttribute('data-category') === category) {
-                    section.classList.add('active');
-                    section.classList.remove('inactive');
+                    item.style.display = 'block';
                 } else {
-                    section.classList.remove('active');
-                    section.classList.add('inactive');
+                    if (item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
                 }
             });
         });
+    });
+
+    const fileInput = document.getElementById('file-input');
+    fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                // Hacer algo con la imagen cargada, por ejemplo, mostrarla en un lugar específico
+                const imageUrl = e.target.result;
+                console.log('Imagen cargada:', imageUrl);
+                // Aquí puedes añadir el código para mostrar la imagen en el sitio web
+            };
+            reader.readAsDataURL(file);
+        }
     });
 });
