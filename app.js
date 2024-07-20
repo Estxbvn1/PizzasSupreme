@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
+            // Elimina la clase 'selected' de todos los botones
+            buttons.forEach(btn => btn.classList.remove('selected'));
+
+            button.classList.add('selected');
+
             const category = button.getAttribute('data-category');
 
             menuItems.forEach(item => {
