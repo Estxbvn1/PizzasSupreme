@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1c1c1c;
-    color: #ffffff;
+    color: #cfcfcf;
     overflow-x: hidden;
     font-weight: bold; /* Todas las letras en negrita */
 }
@@ -51,13 +51,14 @@ nav {
 }
 
 .logo {
-    height: 80px; /* Ajusta el tamaño del logo si es necesario */
+    height: 90px; /* Ajusta el tamaño del logo si es necesario */
 }
 
 .nav-items {
     display: flex;
     justify-content: center; /* Centra los enlaces */
     flex: 1; /* Ocupa el espacio disponible */
+    
 }
 
 .nav-items a {
@@ -65,7 +66,7 @@ nav {
     text-decoration: none;
     font-size: 1.1rem;
     margin: 0 1rem; /* Espacio entre los enlaces */
-    transition: color 0.3s;
+    transition: color 0.5s;
 }
 
 .nav-items a:hover {
@@ -74,15 +75,19 @@ nav {
 
 /* Hero Section */
 .hero {
-    background-image: url('imagenes/hero-background.jpg');
+    background-image: url('imagenes/pizza1.jpg');
     background-size: cover;
     background-position: center;
     color: white;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor del logo */
     text-align: center;
     padding: 4rem 0.5rem;
     position: relative;
     overflow: hidden;
     margin-top: 70px; /* Adjusted for fixed header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold; /* Negrita */
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
 }
 
 .hero::before {
@@ -93,6 +98,7 @@ nav {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
+    
 }
 
 .hero-content {
@@ -100,6 +106,7 @@ nav {
     z-index: 1;
     max-width: 800px;
     margin: 0 auto;
+    
 }
 
 /* Ajuste del logo en la sección de bienvenida */
@@ -107,31 +114,35 @@ nav {
     display: block;
     margin: 0 auto;
     margin-bottom: 1rem;
-    background-color: #1c1c1c; /* Fondo del mismo color para que no se vea el borde */
+    background-color: #0e0d0d; /* Fondo del mismo color para que no se vea el borde */
     border-radius: 50%; /* Hacer el logo circular */
-    padding: 1rem; /* Espacio alrededor del logo */
+    padding: 0.2rem; /* Espacio alrededor del logo */
     animation: fade-in 2s ease-in-out;
-    width: 250; /* Tamaño del logo */
+    width: 250px; /* Tamaño del logo */
     height: 250px;
     object-fit: cover;
+    box-shadow: 0px 0px 20px 10px rgba(112, 112, 112, 0.5); /* Sombra alrededor del logo */
 }
 
 /* Estilo para la sección de bienvenida */
 .hero-content {
     text-align: center;
     padding-top: 4rem; /* Ajusta este valor según necesites */
+    
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-top: 0; /* Quitar margen superior */
+    
 }
 
 
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     animation: fade-in 2s ease-in-out;
+    
 }
 
 @keyframes fade-in {
@@ -147,12 +158,14 @@ nav {
 .menu-section {
     padding: 4rem 0;
     text-align: center;
+    
 }
 
 .menu-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     animation: fade-in 2s ease-in;
+    
 }
 
 .filter-buttons {
@@ -172,6 +185,7 @@ nav {
     cursor: pointer;
     border-radius: 25px;
     transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor del logo */
 }
 
 .filter-buttons .filter-btn:hover {
@@ -203,6 +217,7 @@ nav {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     margin: 0 auto; /* Center the container */
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor del logo */
 }
 
 .menu-item img {
@@ -212,6 +227,7 @@ nav {
     margin-bottom: 0.5rem;
     border-radius: 10px;
     animation: image-zoom 2s ease-in-out;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor del logo */
 }
 
 .menu-item-details {
@@ -219,8 +235,19 @@ nav {
 }
 
 @media (max-width: 768px) {
+
+
+    .filter-buttons .filter-btn {
+        width: 80%;
+        margin: 0.5rem 0; /* Añadir espacio entre los botones */
+        padding: 0.8rem; /* Ajustar el padding para una mejor apariencia */
+        font-size: 1.4rem; /* Tamaño de fuente ajustado */
+        border-radius: 25px; /* Esquinas redondeadas */
+        
+    }
+    
     .menu-item-container {
-        grid-template-columns: 1fr; /* Filas de 1 elemento en pantallas pequeñas */
+        grid-template-columns: 2fr; /* Filas de 1 elemento en pantallas pequeñas */
         gap: 1rem; /* Reduce the gap for smaller screens */
     }
 
@@ -241,6 +268,7 @@ nav {
     .menu-item-details p,
     .price {
         font-size: 1rem; /* Reduce font size for smaller screens */
+        
     }
 }
 
@@ -256,6 +284,10 @@ nav {
 .menu-item-details .product-name {
     margin: 1rem 0 0.5rem;
     color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold; /* Negrita */
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
+    
 }
 
 .menu-item-details p {
@@ -266,6 +298,7 @@ nav {
 .price {
     font-size: 1.5rem;
     font-weight: bold;
+    
 }
 
 /* Extra Ingredients Section */
@@ -274,6 +307,7 @@ nav {
     justify-content: center; /* Centrar horizontalmente */
     padding: 2rem 0;
     background-color: #252424; /* Mismo color gris oscuro */
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor del logo */
 }
 
 .extra-ingredients-content {
@@ -284,6 +318,7 @@ nav {
     max-width: 80%; /* Limitar el ancho máximo */
     text-align: center; /* Centrar el texto */
     color: white; /* Color del texto */
+    
 }
 
 
@@ -303,12 +338,13 @@ nav {
     }
 }
 
-
-
-/* Cambiar el color de "Ingredientes:" */
-.ingredientes-text {
-    color: #ff1900; /* Cambia este color al que prefieras */
+.menu-item .menu-item-details .ingredientes-text {
+    color: #e79d3cc4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold; /* Negrita */
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
 }
+
 
 /* Contact Section */
 .contact-section {
@@ -317,6 +353,9 @@ nav {
     padding: 4rem 0;
     text-align: center;
     border-radius: 10px; /* Esquinas redondeadas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold; /* Negrita */
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
 }
 
 .contact-content {
@@ -351,6 +390,9 @@ nav {
 
 .contact-info a:hover {
     color: #e79d3c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold; /* Negrita */
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
 }
 
 /* Footer */
