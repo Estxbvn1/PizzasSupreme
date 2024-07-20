@@ -193,6 +193,11 @@ nav {
     transform: scale(1.1);
 }
 
+.filter-btn.selected {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
 .menu-item-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Filas de 3 elementos */
@@ -226,8 +231,7 @@ nav {
     object-fit: cover;
     margin-bottom: 0.5rem;
     border-radius: 10px;
-    animation: image-zoom 2s ease-in-out;
-    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor del logo */
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor */
 }
 
 .menu-item-details {
@@ -296,7 +300,7 @@ nav {
 }
 
 .price {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     
 }
@@ -367,7 +371,7 @@ nav {
 
 .contact-info {
     flex: 1;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.5;
 }
 
@@ -418,6 +422,7 @@ footer {
     max-width: 25%;
     min-width: 200px;
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .footer-section h3 {
@@ -493,6 +498,7 @@ footer {
     .footer-section {
         max-width: none;
         width: 100%;
+        font-size: 1.2rem;
     }
 }
 
@@ -513,7 +519,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, transform 0.3s;
     text-decoration: none;
@@ -575,3 +581,20 @@ h2, .product-name, .menu-item-details p {
 
 }
 
+.ingredients-name {
+    margin: 1rem 0 0.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold; /* Negrita */
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
+    
+}
+
+.ingredients-text {
+    margin: 1rem 0 0.5rem;
+    color: #e79d3c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold; /* Negrita */
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
+    
+}
