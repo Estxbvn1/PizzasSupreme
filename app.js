@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Elimina la clase 'selected' de todos los botones
             buttons.forEach(btn => btn.classList.remove('selected'));
 
+            // Añade la clase 'selected' al botón que fue presionado
             button.classList.add('selected');
 
             const category = button.getAttribute('data-category');
@@ -49,18 +50,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const fileInput = document.getElementById('file-input');
-    fileInput.addEventListener('change', (event) => {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                // Hacer algo con la imagen cargada, por ejemplo, mostrarla en un lugar específico
-                const imageUrl = e.target.result;
-                console.log('Imagen cargada:', imageUrl);
-                // Aquí puedes añadir el código para mostrar la imagen en el sitio web
-            };
-            reader.readAsDataURL(file);
-        }
+    const floatingButtons = document.querySelectorAll('.floating-button');
+
+    floatingButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const appUrl = button.getAttribute('href');
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                window.location.href = appUrl;
+            } else {
+                window.open(appUrl, '_blank');
+            }
+
+            event.preventDefault();
+        });
     });
+
+    const fileInput = document.getElementById('file-input');
+    if (fileInput) {
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    // Hacer algo con la imagen cargada, por ejemplo, mostrarla en un lugar específico
+                    const imageUrl = e.target.result;
+                    console.log('Imagen cargada:', imageUrl);
+                    // Aquí puedes añadir el código para mostrar la imagen en el sitio web
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
 });
